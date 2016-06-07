@@ -1,0 +1,32 @@
+.activity-complete h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.specialneedsvisit .interactive-instructions {
+    margin-top: 10px;
+}
+
+.specialneedsvisit .panel-group .panel-heading {
+    background: #fcfcfc url('/static/img/visited-unchecked.png') 5px center no-repeat;
+    font-weight: bold;
+}
+
+.specialneedsvisit .panel-group .panel-heading a {
+    margin-left: 20px;
+}
+
+.specialneedsvisit .panel-group .panel-heading.visited {
+    background: #e1f1f1 url('/static/img/visited-checked.png') 5px center no-repeat;
+}
+
+@media print {
+    .collapse {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .specialneedsvisit .panel-group .panel-heading a {
+        margin-left: 0px;
+    }
+}
