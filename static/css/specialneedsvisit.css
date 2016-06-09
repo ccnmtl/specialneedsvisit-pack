@@ -8,7 +8,7 @@
 }
 
 .specialneedsvisit .panel-group .panel-heading {
-    background: #fcfcfc url('/static/img/visited-unchecked.png') 5px center no-repeat;
+    background: #fcfcfc url('../img/visited-unchecked.png') 5px center no-repeat;
     font-weight: bold;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .specialneedsvisit .panel-group .panel-heading.visited {
-    background: #e1f1f1 url('/static/img/visited-checked.png') 5px center no-repeat;
+    background: #e1f1f1 url('../img/visited-checked.png') 5px center no-repeat;
 }
 
 @media print {
