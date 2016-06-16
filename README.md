@@ -9,16 +9,23 @@ This and other interactives were developed by the Columbia University [College o
 REQUIREMENTS
 ------------
 npm
+webpack
 
-
-EMBEDDING
-------------
-npm
-
-
-INSTALLATION
+DEV INSTALLATION
 ------------
 1. Clone the repository
 2. Type make runserver. This command will install the necessary npm modules, build the bundle and spin up Webpack's dev server.
 3. Navigate to http://localhost:8080.
 4. Play around with the interactive!
+
+NPM INSTALLATION
+------------
+1. npm install specialneedsvisit-pack
+2. ./node_modules/webpack/webpack.js --output-path <output_path> --config ./node_modules/specialneedsvisit-pack/webpack.config.js
+3. Embed the interactive via an iframe.
+
+```
+<code>
+    <iframe src="<server>/<output_path>/index.html"></iframe>
+</code>
+```
