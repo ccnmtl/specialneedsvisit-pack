@@ -14,10 +14,12 @@ var SpecialNeedsVisitView = Backbone.View.extend({
     },
     initialize: function(options) {
         _.bindAll(this, 'onShowAnswer', 'onHideAnswer',
-                  'maybeComplete', 'onPrint');
+                  'maybeComplete', 'onPrint', 'beforeUnload');
         jQuery(this.el).find('.panel-group').collapse({toggle: false});
         this.total = jQuery(this.el).find('.panel-heading').length;
         jQuery(this.el).show();
+
+        jQuery(window).on('beforeunload', this.beforeUnload);
     },
     maybeComplete: function() {
         var clicked = jQuery(this.el).find('.panel-heading.visited').length;
@@ -43,6 +45,12 @@ var SpecialNeedsVisitView = Backbone.View.extend({
     },
     onPrint: function(evt) {
         window.print();
+    },
+    beforeUnload: function() {
+        if (jQuery('.activity-complete:hidden').length > 0) {
+            return 'The activity is not complete. ' +
+                'Your progress will not be saved if you leave this page.';
+        }
     }
 });
 
