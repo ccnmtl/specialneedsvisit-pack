@@ -1,10 +1,17 @@
-.activity-complete h3 {
-    margin-top: 0;
-    margin-bottom: 0;
+.activity-complete {
+    margin: 0;
+}
+
+.done {
+    margin-right: 5px;
 }
 
 .specialneedsvisit .interactive-instructions {
     margin-top: 10px;
+}
+
+.specialneedsvisit .panel {
+    margin-bottom: 10px;
 }
 
 .specialneedsvisit .panel-group .panel-heading {
@@ -13,7 +20,10 @@
 }
 
 .specialneedsvisit .panel-group .panel-heading a {
+    display: block;
     margin-left: 20px;
+    margin-right: 10px;
+    text-decoration: none;
 }
 
 .specialneedsvisit .panel-group .panel-heading.visited {
