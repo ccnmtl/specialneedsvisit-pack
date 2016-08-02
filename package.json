@@ -1,6 +1,6 @@
 {
   "name": "specialneedsvisit-pack",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Interactive to prepare for a dental visit with a special needs patient",
   "main": "src/index.js",
   "scripts": {
