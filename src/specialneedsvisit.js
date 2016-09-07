@@ -6,6 +6,19 @@ var Backbone = require('backbone');
 var _ = require('underscore');
 require('bootstrap');
 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1));
+    var sURLVariables = sPageURL.split('&');
+
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
 var SpecialNeedsVisitView = Backbone.View.extend({
     events: {
         'click .btn-print': 'onPrint',
@@ -19,7 +32,10 @@ var SpecialNeedsVisitView = Backbone.View.extend({
         this.total = jQuery(this.el).find('.panel-heading').length;
         jQuery(this.el).show();
 
-        jQuery(window).on('beforeunload', this.beforeUnload);
+        var quiet = getUrlParameter('quiet') === '1';
+        if (!quiet) {
+            jQuery(window).on('beforeunload', this.beforeUnload);
+        }
     },
     maybeComplete: function() {
         var clicked = jQuery(this.el).find('.panel-heading.visited').length;
