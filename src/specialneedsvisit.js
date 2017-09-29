@@ -26,8 +26,9 @@ var SpecialNeedsVisitView = Backbone.View.extend({
         'hidden.bs.collapse .panel-group': 'onHideAnswer'
     },
     initialize: function(options) {
-        _.bindAll(this, 'onShowAnswer', 'onHideAnswer',
-                  'maybeComplete', 'onPrint', 'beforeUnload');
+        _.bindAll(
+            this, 'onShowAnswer', 'onHideAnswer',
+            'maybeComplete', 'onPrint', 'beforeUnload');
         jQuery(this.el).find('.panel-group').collapse({toggle: false});
         this.total = jQuery(this.el).find('.panel-heading').length;
         jQuery(this.el).show();

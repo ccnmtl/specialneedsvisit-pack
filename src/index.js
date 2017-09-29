@@ -13,7 +13,7 @@ var jQuery = require('jquery');
 var module = require('./specialneedsvisit.js');
 
 jQuery(document).ready(function() {
-    var view = new module.SpecialNeedsVisitView({
+    new module.SpecialNeedsVisitView({
         el: '.specialneedsvisit'
     });
 });
