@@ -51,7 +51,7 @@ describe('SpecialNeedsVisitTest', function() {
             assert.equal($icon.length, 1, 'Icon is defined');
 
             assert.isFalse($heading.hasClass('visited'));
-            assert.isTrue($icon.hasClass('glyphicon'));
+            assert.strictEqual($icon.hasClass('glyphicon'), true);
 
             $link.click();
         });
@@ -64,7 +64,8 @@ describe('SpecialNeedsVisitTest', function() {
         });
 
         it('activity is complete', function() {
-            assert.isTrue(jQuery('.activity-complete').is(':visible'));
+            assert.strictEqual(
+                jQuery('.activity-complete').is(':visible'), true);
         });
     });
 });
