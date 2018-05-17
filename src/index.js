@@ -12,7 +12,25 @@ import '../static/css/specialneedsvisit.css';
 import jQuery from 'jquery';
 import module from './specialneedsvisit.js';
 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1));
+    var sURLVariables = sPageURL.split('&');
+
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
 jQuery(document).ready(function() {
+
+    if (!getUrlParameter('parent')) {
+        jQuery('#cu-privacy-notice').addClass('required');
+    }
+
     new module.SpecialNeedsVisitView({
         el: '.specialneedsvisit'
     });
