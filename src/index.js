@@ -1,5 +1,3 @@
-/* global jQuery: true */
-
 require('!file-loader?name=[name].[ext]!../static/index.html');
 require('!file-loader?name=[name].[ext]!../static/img/logo-ctl.png');
 require('!file-loader?name=[name].[ext]!../static/img/logo-cdm.png');
