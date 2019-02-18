@@ -1,4 +1,4 @@
-/* global jQuery: true, module: true, alert: true */
+/* global module: true */
 
 var jQuery = require('jquery');
 window.jQuery = window.$ = jQuery;
