@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "serve": "webpack-dev-server --hot --inline --open",
-    "test": "./node_modules/.bin/mocha-chrome test/view-test.html",
+    "test": "mocha-chrome test/view-test.html",
     "build": "webpack && webpack --config test/test.webpack.config.js"
   },
   "repository": {
