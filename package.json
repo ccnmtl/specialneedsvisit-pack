@@ -4,7 +4,7 @@
   "description": "Interactive to prepare for a dental visit with a special needs patient",
   "main": "src/index.js",
   "scripts": {
-    "serve": "webpack-dev-server --hot --inline --open",
+    "serve": "webpack serve --inline --hot --mode development",
     "test": "mocha-chrome test/view-test.html",
     "build": "webpack && webpack --config test/test.webpack.config.js"
   },
