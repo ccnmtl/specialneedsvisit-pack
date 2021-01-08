@@ -1,0 +1,13 @@
+name: build-and-test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - name: Build with Makefile
+        run: make
