@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/ccnmtl/specialneedsvisit-pack/workflows/build-and-test/badge.svg)](https://github.com/ccnmtl/specialneedsvisit-pack/actions)
+
 Special Needs Dental Visit: Standalone Interactive Exercise 
 ==========
 
