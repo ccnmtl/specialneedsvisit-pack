@@ -28,3 +28,8 @@ updates:
   - dependency-name: chai
     versions:
     - 4.3.2
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
