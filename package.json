@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "serve": "webpack serve --hot --mode development",
-    "test": "mocha-headless-chrome -f test/view-test.html",
+    "test": "sh -c \"[ \\\"$CI\\\" = \\\"true\\\" ] && mocha-headless-chrome -f dist/view-test.html --no-sandbox || mocha-headless-chrome -f dist/view-test.html\"",
     "build": "webpack && webpack --config test/test.webpack.config.js"
   },
   "repository": {
